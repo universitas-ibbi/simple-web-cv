@@ -10,20 +10,22 @@ import Skill from './Skill.jsx'
 const router = createBrowserRouter([
   {
     path: "/", // http://localhost:5173
-    element: <App />
+    element: <App />,
+    children: [
+      {
+        path: "profile", // http://localhost:5173/profile
+        element: <Profile />
+      },
+      {
+        path: "expertise", // http://localhost:5173/expertise
+        element: <Expertise />
+      },
+      {
+        path: "skill", // http://localhost:5173/skill
+        element: <Skill />
+      }
+    ]
   },
-  {
-    path: "profile", // http://localhost:5173/profile
-    element: <Profile />
-  },
-  {
-    path: "expertise", // http://localhost:5173/expertise
-    element: <Expertise />
-  },
-  {
-    path: "skill", // http://localhost:5173/skill
-    element: <Skill />
-  }
 ])
 
 
