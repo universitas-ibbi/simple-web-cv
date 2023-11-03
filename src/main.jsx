@@ -13,6 +13,10 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {
+        index: true,
+        element: <Profile />
+      },
+      {
         path: "profile", // http://localhost:5173/profile
         element: <Profile />
       },
